@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(238, 108, 227, 0.671);
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+  position: relative;
+}
+
+.wrapperLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.welcome {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.activeLink {
+  color: black;
+}
+
+.exitButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}

@@ -1,22 +1,22 @@
-import ContactForm from "./components/ContactForm/ContactForm";
-import SearchBox from "./components/SearchBox/SearchBox";
-import ContactList from "./components/ContactList/ContactList";
-import { selectIsError, selectIsLoading } from "./redux/contactsSlice";
-import { useSelector } from "react-redux";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
+import Contacts from "./pages/Contacts";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
-  const loading = useSelector(selectIsLoading);
-  const error = useSelector(selectIsError);
-
   return (
-    <div>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
-      {loading && <h2>Loading...</h2>}
-      {error && <h2>Error...</h2>}
-      <ContactList />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="contact" element={<Contacts />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+      </Route>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 };
 
