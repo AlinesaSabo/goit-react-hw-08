@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: rgb(245, 129, 235);
+  & button {
+    border: none;
+    padding: 5px 15px;
+    background-color: rgb(241, 150, 214);
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    font-weight: bold;
+    color: aliceblue;
+  }
+}
