@@ -1,0 +1,38 @@
+#particles canvas {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.App {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://grizly.club/sec2/uploads/posts/2024-02/grizly-club-p-krasivii-fon-snezhnie-gori-15.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  z-index: -1;
+  filter: brightness(0.6) blur(3px);
+}
+
+.App::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(39, 31, 35, 0.144); /* Розовый цвет с прозрачностью */
+}

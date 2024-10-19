@@ -2,13 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <div
-      className="hero min-h-screen"
-      style={{
-        backgroundImage:
-          "url(https://grizly.club/sec2/uploads/posts/2024-02/grizly-club-p-pastelno-rozovii-fon-s-tsvetami-5.png)",
-      }}
-    >
+    <div className="hero min-h-screen">
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md">

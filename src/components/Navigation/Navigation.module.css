@@ -3,8 +3,9 @@
   font-weight: bold;
   text-decoration: none;
   padding: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .link.active {
-  color: black;
+  color: rgb(255, 255, 255);
 }

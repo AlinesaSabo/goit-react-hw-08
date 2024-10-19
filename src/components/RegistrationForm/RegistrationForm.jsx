@@ -20,7 +20,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero min-h-screen">
       <div className="hero-content flex-col ">
         <div className="text-center lg:text-left">
           <motion.h1
