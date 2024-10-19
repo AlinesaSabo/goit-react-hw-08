@@ -24,10 +24,7 @@ const slice = createSlice({
         state.user = action.payload.user;
         state.token = action.payload.token;
       })
-      .addCase(logout.fulfilled, (state) => {
-        state.items = [];
-        state.isLoggedIn = false;
-      })
+      .addCase(logout.fulfilled, () => initialState)
       .addCase(refresh.fulfilled, (state, action) => {
         state.user.email = action.payload.email;
         state.user.name = action.payload.name;

@@ -3,7 +3,7 @@ import Layout from "./components/Layout/Layout";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { refresh } from "./redux/auth/operations";
-import { selectIsLoggedIn, selectIsRefreshing } from "./redux/auth/selectors";
+import { selectIsRefreshing } from "./redux/auth/selectors";
 import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
 import { RestrictedRoute } from "./components/RestrictedRoute/RestrictedRoute";
 
@@ -22,10 +22,6 @@ const App = () => {
   }, [dispatch]);
 
   const isRefreshing = useSelector(selectIsRefreshing);
-  const isLoggedIn = useSelector(selectIsLoggedIn);
-
-  console.log("Is refreshing:", isRefreshing);
-  console.log("Is logged in:", isLoggedIn);
 
   return isRefreshing ? null : (
     <Suspense

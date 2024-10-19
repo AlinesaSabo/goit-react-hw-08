@@ -5,8 +5,9 @@ import { useEffect } from "react";
 
 import { motion } from "framer-motion";
 import { slideInFromBot } from "../../motion/motion";
-import { selectFilteredContacts } from "../../redux/contacts/slice";
+
 import { fetchContacts } from "../../redux/contacts/operations";
+import { selectFilteredContacts } from "../../redux/contacts/selectors";
 
 const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts);
