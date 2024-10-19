@@ -28,7 +28,13 @@ const App = () => {
   console.log("Is logged in:", isLoggedIn);
 
   return isRefreshing ? null : (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className="grid justify-items-center mt-10">
+          <span className="loading loading-spinner text-primary"></span>
+        </div>
+      }
+    >
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

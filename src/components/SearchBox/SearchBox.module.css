@@ -17,6 +17,12 @@ label {
     font-weight: bold;
     text-align: center;
   }
+  & input {
+    padding: 5px;
+    box-shadow: 0 0 10px 2px rgb(230, 176, 213);
+    border: none;
+    border-radius: 8px;
+  }
 }
 
 .wrapper {

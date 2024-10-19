@@ -1,6 +1,8 @@
 import { Field, Formik, Form } from "formik";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
+import { slideInFromLeft, slideInFromRight } from "../../motion/motion";
+import { motion } from "framer-motion";
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -20,9 +22,22 @@ const RegisterForm = () => {
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col ">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Sign up now!</h1>
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={slideInFromRight()}
+            className="text-5xl font-bold"
+          >
+            Sign up now!
+          </motion.h1>
         </div>
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <motion.div
+          exit="exit"
+          initial="hidden"
+          animate="visible"
+          variants={slideInFromLeft(1)}
+          className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+        >
           <Formik onSubmit={handleSubmit} initialValues={initialValues}>
             <Form className="card-body">
               <div className="form-control">
@@ -32,7 +47,7 @@ const RegisterForm = () => {
                 <Field
                   name="name"
                   type="name"
-                  placeholder="Name"
+                  placeholder="name"
                   className="input input-bordered"
                   required
                 />
@@ -44,7 +59,7 @@ const RegisterForm = () => {
                 <Field
                   name="email"
                   type="email"
-                  placeholder="Email"
+                  placeholder="email"
                   className="input input-bordered"
                   required
                 />
@@ -56,24 +71,19 @@ const RegisterForm = () => {
                 <Field
                   name="password"
                   type="password"
-                  placeholder="Password"
+                  placeholder="password"
                   className="input input-bordered"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary">
-                  Login
+                <button type="submit" className="btn btn-primary text-white">
+                  Register
                 </button>
               </div>
             </Form>
           </Formik>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

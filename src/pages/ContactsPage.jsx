@@ -11,7 +11,11 @@ const ContactsPage = () => {
     <div>
       <ContactForm />
       <SearchBox />
-      {loading && <h2>Loading...</h2>}
+      {loading && (
+        <h2 className="grid justify-items-center mt-10">
+          <span className=" loading loading-spinner text-primary "></span>
+        </h2>
+      )}
       {error && <h2>Error...</h2>}
       <ContactList />
     </div>

@@ -4,3 +4,9 @@
   gap: 20px;
   color: rgb(245, 129, 235);
 }
+
+.link {
+  color: rgb(245, 129, 235);
+  font-weight: bold;
+  text-decoration: none;
+}
