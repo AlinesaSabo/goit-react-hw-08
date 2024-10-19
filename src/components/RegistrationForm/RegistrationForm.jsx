@@ -1,8 +1,9 @@
 import { Field, Formik, Form } from "formik";
 import { useDispatch } from "react-redux";
-import { register } from "../../redux/auth/operations";
+
 import { slideInFromLeft, slideInFromRight } from "../../motion/motion";
 import { motion } from "framer-motion";
+import { register } from "../../redux/auth/operations";
 
 const RegisterForm = () => {
   const dispatch = useDispatch();

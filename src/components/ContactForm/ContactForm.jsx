@@ -2,6 +2,9 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import s from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
+
+import { motion } from "framer-motion";
+import { slideInFromTop } from "../../motion/motion";
 import { addContact } from "../../redux/contacts/operations";
 
 const ContactForm = () => {
@@ -23,7 +26,12 @@ const ContactForm = () => {
   });
 
   return (
-    <div className={s.formWrapper}>
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={slideInFromTop()}
+      className={s.formWrapper}
+    >
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
@@ -43,7 +51,7 @@ const ContactForm = () => {
           <button type="submit">Add contact</button>
         </Form>
       </Formik>
-    </div>
+    </motion.div>
   );
 };
 

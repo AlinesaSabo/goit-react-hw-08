@@ -2,13 +2,20 @@ import { useSelector } from "react-redux";
 import ContactForm from "../components/ContactForm/ContactForm";
 import ContactList from "../components/ContactList/ContactList";
 import SearchBox from "../components/SearchBox/SearchBox";
-import { selectIsError, selectIsLoading } from "../redux/contacts/selector";
+import { selectIsError, selectIsLoading } from "../redux/contacts/selectors";
+import { slideInFromLeft } from "../motion/motion";
+import { motion } from "framer-motion";
 
 const ContactsPage = () => {
   const loading = useSelector(selectIsLoading);
   const error = useSelector(selectIsError);
   return (
-    <div>
+    <motion.div
+      exit="exit"
+      initial="hidden"
+      animate="visible"
+      variants={slideInFromLeft()}
+    >
       <ContactForm />
       <SearchBox />
       {loading && (
@@ -18,7 +25,7 @@ const ContactsPage = () => {
       )}
       {error && <h2>Error...</h2>}
       <ContactList />
-    </div>
+    </motion.div>
   );
 };
 
