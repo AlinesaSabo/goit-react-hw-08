@@ -24,19 +24,19 @@ const ParticlesComponent = (props) => {
         events: {
           onClick: {
             enable: true,
-            mode: "repulse", // Изменяем на repulse
+            mode: "repulse",
           },
         },
         modes: {
           repulse: {
-            distance: 100, // Устанавливаем расстояние убегания
-            duration: 0.4, // Длительность убегания
+            distance: 300,
+            duration: 0.5,
           },
         },
       },
       particles: {
         color: {
-          value: "#ff69b4",
+          value: "#feddef",
         },
         move: {
           direction: "bottom",
@@ -52,7 +52,7 @@ const ParticlesComponent = (props) => {
           density: {
             enable: true,
           },
-          value: 150,
+          value: 200,
         },
         opacity: {
           value: 1.0,
