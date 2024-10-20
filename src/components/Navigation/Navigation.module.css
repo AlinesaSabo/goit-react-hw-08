@@ -1,11 +1,21 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   color: rgb(245, 129, 235);
   font-weight: bold;
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 18px;
 }
 
-.link.active {
-  color: rgb(255, 255, 255);
+.link.hover {
+  color: #ffffff;
 }
